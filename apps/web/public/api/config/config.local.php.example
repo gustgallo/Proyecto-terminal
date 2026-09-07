@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copia este archivo como config.local.php y completa los valores.
+ * No publiques config.local.php en GitHub.
+ */
+return [
+    'DB_HOST' => 'localhost',
+    'DB_NAME' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_USER' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_PASSWORD' => 'COLOCA_AQUI_LA_PASSWORD_DE_MARIADB',
+
+    // Opcional. Si se deja vacío, la API deriva un secreto estable de DB_PASSWORD.
+    'JWT_SECRET' => '',
+
+    // Google reCAPTCHA v3. Usa claves registradas para el dominio de PRODISA.
+    'RECAPTCHA_ENABLED' => true,
+    'RECAPTCHA_SITE_KEY' => 'COLOCA_AQUI_SITE_KEY',
+    'RECAPTCHA_SECRET_KEY' => 'COLOCA_AQUI_SECRET_KEY',
+    'RECAPTCHA_MIN_SCORE' => 0.5,
+
+    // Opcional. Por ejemplo un microservicio de IA en Cloud Run.
+    'AI_SERVICE_URL' => '',
+    'AI_SHARED_SECRET' => '',
+];

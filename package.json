@@ -1,0 +1,18 @@
+{
+  "name": "prodisa-platform",
+  "version": "3.0.0",
+  "private": true,
+  "description": "PRODISA: React + Vite, API PHP local en GoogieHost, MariaDB local y microservicio de IA opcional.",
+  "scripts": {
+    "install:web": "npm --prefix apps/web ci",
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:api": "php -S 127.0.0.1:8081 -t apps/web/public apps/web/public/api/dev-router.php",
+    "build:web": "npm --prefix apps/web run build",
+    "build": "npm run build:web",
+    "preview:web": "npm --prefix apps/web run preview",
+    "check:php": "php scripts/check-php.php"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
