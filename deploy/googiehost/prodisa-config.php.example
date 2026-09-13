@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copia este archivo UNA SOLA VEZ fuera de public_html con el nombre:
+ * prodisa-config.php
+ *
+ * Ubicación recomendada por dominio:
+ * dirname($_SERVER['DOCUMENT_ROOT']) . '/prodisa-config.php'
+ *
+ * En DirectAdmin normalmente equivale a:
+ * /home/TU_USUARIO/domains/TU_DOMINIO/prodisa-config.php
+ */
+return [
+    'DB_HOST' => 'localhost',
+    'DB_SOCKET' => '/var/lib/mysql/mysql.sock',
+    'DB_NAME' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_USER' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_PASSWORD' => 'COLOCA_AQUI_LA_CONTRASENA_REAL',
+
+    'JWT_SECRET' => 'GENERA_UN_SECRETO_LARGO_Y_ALEATORIO',
+
+    'RECAPTCHA_ENABLED' => true,
+    'RECAPTCHA_SITE_KEY' => 'TU_SITE_KEY',
+    'RECAPTCHA_SECRET_KEY' => 'TU_SECRET_KEY',
+    'RECAPTCHA_MIN_SCORE' => 0.5,
+    'RECAPTCHA_CONNECT_TIMEOUT_SECONDS' => 3,
+    'RECAPTCHA_TIMEOUT_SECONDS' => 6,
+
+    // Cohere se configura únicamente en este archivo privado, nunca en React ni en Rag.php.
+    'COHERE_API_KEY' => 'TU_COHERE_API_KEY',
+    'COHERE_CHAT_MODEL' => 'command-r-plus',
+    'COHERE_RERANK_MODEL' => 'rerank-v3.5',
+    'COHERE_RERANK_ENABLED' => true,
+    'COHERE_RERANK_MIN_SCORE' => 0.16,
+
+    'AI_SERVICE_URL' => '',
+    'AI_SHARED_SECRET' => '',
+];

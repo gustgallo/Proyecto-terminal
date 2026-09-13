@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" modified="2026-09-05T11:30:00.000Z" agent="Antigravity AI" version="21.0.0" type="device">
+  <diagram id="ERD_SWGRHP_PRODISA" name="Diagrama ER - SWGRHP-IG">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- TABLA: ROLES -->
+        <mxCell id="tbl_roles" value="&lt;b&gt;roles&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ code: VARCHAR(50)&lt;br&gt;+ name: VARCHAR(100)&lt;br&gt;+ user_type: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="180" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: USERS -->
+        <mxCell id="tbl_users" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ email: VARCHAR(150)&lt;br&gt;+ password_hash: VARCHAR(255)&lt;br&gt;+ first_name: VARCHAR(100)&lt;br&gt;+ last_name: VARCHAR(100)&lt;br&gt;+ role_id: INT [FK]&lt;br&gt;+ department: VARCHAR(50)&lt;br&gt;+ is_active: BOOLEAN" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#38BDF8;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="220" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: PROJECTS -->
+        <mxCell id="tbl_projects" value="&lt;b&gt;projects&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ code: VARCHAR(30)&lt;br&gt;+ name: VARCHAR(150)&lt;br&gt;+ client_name: VARCHAR(150)&lt;br&gt;+ status: VARCHAR(30)&lt;br&gt;+ created_by: INT [FK]" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: OVERTIME_RECORDS -->
+        <mxCell id="tbl_overtime" value="&lt;b&gt;overtime_records&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ user_id: INT [FK]&lt;br&gt;+ project_id: INT [FK]&lt;br&gt;+ work_date: DATE&lt;br&gt;+ hours_count: DECIMAL&lt;br&gt;+ status: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: BONUSES -->
+        <mxCell id="tbl_bonuses" value="&lt;b&gt;bonuses&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ user_id: INT [FK]&lt;br&gt;+ project_id: INT [FK]&lt;br&gt;+ amount: DECIMAL&lt;br&gt;+ status: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: MATERIAL_REQUISITIONS -->
+        <mxCell id="tbl_reqs" value="&lt;b&gt;material_requisitions&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ requisition_code: VARCHAR(30)&lt;br&gt;+ project_id: INT [FK]&lt;br&gt;+ requested_by: INT [FK]&lt;br&gt;+ status: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="600" y="280" width="230" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: INTERNAL_REQUESTS -->
+        <mxCell id="tbl_requests" value="&lt;b&gt;internal_requests&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ user_id: INT [FK]&lt;br&gt;+ request_type: VARCHAR(30)&lt;br&gt;+ start_date: DATE&lt;br&gt;+ end_date: DATE&lt;br&gt;+ status: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: AUDIT_LOGS -->
+        <mxCell id="tbl_audit" value="&lt;b&gt;audit_logs&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ user_id: INT [FK]&lt;br&gt;+ action: VARCHAR(50)&lt;br&gt;+ module: VARCHAR(50)&lt;br&gt;+ details: JSONB&lt;br&gt;+ created_at: TIMESTAMP" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="300" y="480" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- TABLA: LEADS_COTIZACIONES -->
+        <mxCell id="tbl_leads" value="&lt;b&gt;leads_cotizaciones&lt;/b&gt;&lt;hr&gt;+ id: SERIAL [PK]&lt;br&gt;+ full_name: VARCHAR(150)&lt;br&gt;+ company_name: VARCHAR(150)&lt;br&gt;+ email: VARCHAR(150)&lt;br&gt;+ solution_type: VARCHAR(100)&lt;br&gt;+ status: VARCHAR(30)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#1E293B;fontColor=#FFFFFF;strokeColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="600" y="480" width="230" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- RELACIONES -->
+        <mxCell id="rel1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="tbl_roles" target="tbl_users">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="tbl_users" target="tbl_bonuses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="tbl_users" target="tbl_projects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="tbl_projects" target="tbl_reqs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

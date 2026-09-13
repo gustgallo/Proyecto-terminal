@@ -1,0 +1,23 @@
+<?php
+/** Solo para desarrollo local. Nunca se distribuye en dist. */
+return [
+    'DB_HOST' => 'localhost',
+    'DB_SOCKET' => '/var/lib/mysql/mysql.sock',
+    'DB_NAME' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_USER' => 'bmosjhel_PRODISA_SWGRHP-IG',
+    'DB_PASSWORD' => '',
+    'JWT_SECRET' => '',
+    'RECAPTCHA_ENABLED' => false,
+    'RECAPTCHA_SITE_KEY' => '',
+    'RECAPTCHA_SECRET_KEY' => '',
+    'RECAPTCHA_MIN_SCORE' => 0.5,
+    'RECAPTCHA_CONNECT_TIMEOUT_SECONDS' => 3,
+    'RECAPTCHA_TIMEOUT_SECONDS' => 6,
+    'COHERE_API_KEY' => '',
+    'COHERE_CHAT_MODEL' => 'command-r-plus',
+    'COHERE_RERANK_MODEL' => 'rerank-v3.5',
+    'COHERE_RERANK_ENABLED' => true,
+    'COHERE_RERANK_MIN_SCORE' => 0.16,
+    'AI_SERVICE_URL' => '',
+    'AI_SHARED_SECRET' => '',
+];
