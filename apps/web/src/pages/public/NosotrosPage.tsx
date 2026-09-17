@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Header } from '../../components/public/Header';
 import { QuoteModal } from '../../components/public/QuoteModal';
 import { Footer } from '../../components/public/Footer';
-import { Shield, Award, MapPin, Factory, Users } from 'lucide-react';
+import { Eye, Factory, MapPin, Target, Users } from 'lucide-react';
 
 export const NosotrosPage: React.FC = () => {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -18,6 +18,40 @@ export const NosotrosPage: React.FC = () => {
               Empresa mexicana especializada en la producción, montaje y mantenimiento de soluciones de imagen corporativa y señalización con cobertura en toda la República Mexicana.
             </p>
           </div>
+
+          <section className="space-y-8" aria-labelledby="mision-vision-title">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 id="mision-vision-title" className="text-3xl font-bold text-white">
+                Misión y Visión
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <article className="bg-slate-900 border border-slate-800 rounded-2xl p-8 sm:p-10 space-y-5">
+                <div className="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold text-white">Misión</h3>
+                  <p className="text-slate-400 leading-relaxed">
+                    Generar soluciones de señalización, mantenimiento y conservación procurando mantener impecable la imagen de nuestros clientes. Ofreciendo productos de alta calidad y servicios oportunos.
+                  </p>
+                </div>
+              </article>
+
+              <article className="bg-slate-900 border border-slate-800 rounded-2xl p-8 sm:p-10 space-y-5">
+                <div className="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold text-white">Visión</h3>
+                  <p className="text-slate-400 leading-relaxed">
+                    Fomentar relaciones de largo plazo con nuestros clientes y ser un aliado estratégico, en la conservación de su imagen. Desarrollar un equipo capaz de cubrir todo el territorio nacional.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center space-y-4">

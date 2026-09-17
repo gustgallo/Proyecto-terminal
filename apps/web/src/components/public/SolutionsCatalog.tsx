@@ -17,7 +17,7 @@ export const SolutionsCatalog: React.FC<SolutionsCatalogProps> = ({ onSelectSolu
       name: 'Totem de posicionamiento de marca',
       category: 'Exterior Monumental',
       desc: 'Estructuras de alto impacto visual diseñadas para visibilidad lejana en avenidas y accesos principales.',
-      img: '/assets/producto logotipo en fachada.png',
+      img: '/assets/Totem_comerciales.webp',
     },
     {
       name: 'Posicionamiento de marca',
@@ -27,9 +27,9 @@ export const SolutionsCatalog: React.FC<SolutionsCatalogProps> = ({ onSelectSolu
     },
     {
       name: 'Señalización interior',
-      category: 'Wayfinding & Directorios',
+      category: 'Directorios',
       desc: 'Sistemas de orientación, placas de directorio, módulos informativos y señalización corporativa.',
-      img: '/assets/producto señalizacion interna acrilico.png',
+      img: '/assets/senalizacion_interna_pcivil.webp',
     },
     {
       name: 'Señalización de protección civil',
@@ -50,10 +50,34 @@ export const SolutionsCatalog: React.FC<SolutionsCatalogProps> = ({ onSelectSolu
       img: '/assets/porductos caja de luz panel de aluminio.png',
     },
     {
-      name: 'Mamparas de protección',
+      name: 'Paneles de Comunicación y Exhibición',
       category: 'División de Espacios',
-      desc: 'Mamparas modulares y panelería acrílica para atención al cliente y áreas corporativas.',
+      desc: 'Mamparas modulares en MDF con portapóster acrílico integrado, diseñadas para señalización, atención al cliente y áreas corporativas.',
       img: '/assets/Producto panel portaposter.png',
+    },
+    {
+      name: 'Conservación de Áreas Comerciales',
+      category: 'Mantenimiento',
+      desc: 'Mantenimiento preventivo, acabados y acondicionamiento integral de espacios corporativos y puntos de venta.',
+      img: '/assets/conservacion.webp',
+    },
+        {
+      name: 'Marcos Luminosos LED',
+      category: 'Señalización Iluminada',
+      desc: 'Estructuras slim de aluminio con iluminación LED perimetral de alta difusión para gráficos intercambiables y publicidad interior.',
+      img: '/assets/portaposter_luminoso1.webp',
+    },
+    {
+      name: 'Señalización Braille y Accesibilidad',
+      category: 'Señalización Arquitectónica',
+      desc: 'Placas táctiles con sistema Braille y texto en alto relieve, fabricadas bajo normas de accesibilidad universal para interiores corporativos y públicos.',
+      img: '/assets/señalizacion_braile.webp',
+    },
+        {
+      name: 'Ingeniería y Desarrollo de Proyectos',
+      category: 'Servicios Técnicos',
+      desc: 'Levantamiento técnico, cálculo estructural, desarrollo de planos de despiece y optimización de materiales para fabricación e instalación en obra.',
+      img: '/assets/Ingenieria.webp',
     },
   ];
 

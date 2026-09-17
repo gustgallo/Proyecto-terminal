@@ -1,0 +1,127 @@
+@startuml
+
+title Mapa de navegabilidad web - SWGRHP-IG PRODISA
+
+top to bottom direction
+
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam ArrowColor #64748B
+skinparam ArrowThickness 1.2
+skinparam nodesep 35
+skinparam ranksep 50
+skinparam packageStyle rectangle
+
+skinparam rectangle {
+  BorderColor #64748B
+  FontColor #0F172A
+  RoundCorner 16
+  Padding 14
+}
+
+skinparam package {
+  BorderColor #CBD5E1
+  FontColor #334155
+  BackgroundColor #F8FAFC
+  RoundCorner 14
+}
+
+rectangle "<b>LANDING PAGE / INICIO</b>\n/\n\n<b>Contenido principal</b>\n• Hero y presentación de PRODISA\n• Marcas atendidas\n• Proceso de fabricación\n• Hotspots interactivos\n• 2 comparativos Antes / Después\n• 5 servicios integrales\n• Catálogo de 8 productos\n• Proyectos por sector\n• Metodología de trabajo en 5 pasos\n\n<b>Acciones globales</b>\n• Navegar por el sitio público\n• Solicitar cotización\n• Acceder a la intranet" as LANDING #E2E8F0
+
+
+package "M1. SITIO PÚBLICO" as PUBLIC_SITE {
+
+  rectangle "<b>SOLUCIONES</b>\n/soluciones\n\n<b>Catálogo de productos</b>\n• Marquesinas\n• Tótem de posicionamiento de marca\n• Posicionamiento de marca\n• Señalización interior\n• Señalización de protección civil\n• Cajas de luz interior\n• Cajas de luz exterior\n• Mamparas de protección\n\n<b>Acción</b>\n• Cotizar producto seleccionado" as SOLUCIONES #FFE6B8
+
+  rectangle "<b>SERVICIOS</b>\n/servicios\n\n<b>Servicios integrales</b>\n• Diseño\n• Fabricación\n• Instalación\n• Mantenimiento correctivo y acabados\n• Conservación\n\n<b>Contenido</b>\n• Capacidades de servicio\n• Metodología de trabajo" as SERVICIOS #FFE6B8
+
+  rectangle "<b>PROYECTOS</b>\n/proyectos\n\n<b>Portafolio</b>\n• Proyectos por sector\n• Banca y financiero\n• Retail y comercial\n• Filtrado por sector\n• Cliente, solución y ubicación" as PROYECTOS_PUBLICOS #FFE6B8
+
+  rectangle "<b>NOSOTROS</b>\n/nosotros\n\n<b>Información institucional</b>\n• Presentación de la empresa\n• Misión\n• Visión\n• Infraestructura propia\n• Cobertura nacional\n• Relación de largo plazo" as NOSOTROS #FFE6B8
+
+  rectangle "<b>CONTACTO</b>\n/contacto\n\n<b>Información y contacto</b>\n• Teléfonos de atención\n• Correo comercial\n• Planta y oficinas\n• Formulario directo de cotización\n\n<b>Acción</b>\n• Enviar solicitud de cotización" as CONTACTO #FFE6B8
+}
+
+
+rectangle "<b>M0. INTERFAZ DE USUARIOS</b>\nAcceso Personal\n/intranet/login\n\n<b>Autenticación</b>\n• Iniciar sesión\n• Validación de credenciales\n• reCAPTCHA v3\n• Recuperar contraseña\n• Solicitar contraseña temporal" as LOGIN #FBD5D5
+
+
+rectangle "<b>INTRANET SWGRHP-IG</b>\n/intranet\n\n<b>Navegación protegida</b>\n• Menú según rol\n• Notificaciones internas\n• Marcar una o todas como leídas\n• Regresar al sitio público\n• Cerrar sesión" as INTRANET #DCE8FF
+
+
+package "MÓDULOS INTERNOS" as INTERNAL_MODULES {
+
+  rectangle "<b>TABLERO PRINCIPAL</b>\n/intranet/dashboard\n\n• Bienvenida y datos del usuario\n• Rol y departamento\n• Horas extras pendientes\n• Proyectos activos\n• Bonificaciones del mes\n• Requisiciones de materiales\n• Resumen del flujo de aprobación\n• Resumen del asistente RAG" as DASHBOARD #DCE8FF
+
+
+  rectangle "<b>M3. HORAS EXTRAS</b>\n/intranet/horas-extras\n\n<b>Empleado</b>\n• Registrar solicitud\n• Consultar historial y estado\n• Editar solicitud pendiente\n• Eliminar solicitud pendiente\n\n<b>Jefatura / RRHH / Admin</b>\n• Revisar solicitudes\n• Aprobar o rechazar\n• Ajustar horas y observaciones\n• Reabrir solicitudes procesadas\n\n<b>M9. Reportes integrado en este módulo</b>\n• Filtrar registros\n• Exportar CSV\n• Generar PDF imprimible" as HORAS_EXTRAS #DCE8FF
+
+
+  rectangle "<b>M4. BONIFICACIONES</b>\n/intranet/bonificaciones\n\n• Consultar bonificaciones\n• Empleado beneficiado\n• Monto\n• Proyecto asociado\n• Motivo\n• Fecha\n• Estado" as BONIFICACIONES #DCE8FF
+
+
+  rectangle "<b>M6. MATERIALES</b>\n/intranet/materiales\n\n<b>Requisiciones</b>\n• Consultar requisiciones\n• Código de requisición\n• Proyecto relacionado\n• Solicitante\n• Departamento\n• Total de materiales\n• Estado\n\n<b>Acceso</b>\n• Admin Global\n• Producción / Logística\n• Mesa de Control" as MATERIALES #DCE8FF
+
+
+  rectangle "<b>M7. PROYECTOS</b>\n/intranet/proyectos\n\n• Consultar proyectos registrados\n• Código y nombre del proyecto\n• Cliente y sector\n• Descripción\n• Estado\n• Fecha de inicio\n• Fecha estimada de término\n• Seguimiento de asignación de personal\n\n<b>Acceso</b>\n• Admin Global\n• Mesa de Control\n• Producción / Logística" as PROYECTOS_INT #DCE8FF
+
+
+  rectangle "<b>M8. SOLICITUDES INTERNAS</b>\n/intranet/solicitudes\n\n<b>Vacaciones, permisos y ausencias</b>\n• Consultar solicitudes\n• Empleado\n• Tipo de solicitud\n• Fecha de inicio y fin\n• Motivo\n• Estado\n• Seguimiento de autorización" as SOLICITUDES #DCE8FF
+
+
+  rectangle "<b>M5. ASISTENTE RRHH</b>\n/intranet/chatbot\n\n<b>Consulta para empleados</b>\n• Iniciar nueva conversación\n• Realizar preguntas de RRHH\n• Consultar vacaciones, permisos y horas extras\n• Respuestas con recuperación documental RAG\n\n<b>Administración documental</b>\nSolo Admin Global y Admin RRHH\n• Consultar fuentes\n• Agregar fuente TXT / MD\n• Pegar contenido documental\n• Eliminar fuente" as CHATBOT #DCE8FF
+
+
+  rectangle "<b>M2. USUARIOS Y PERMISOS</b>\n/intranet/usuarios\n\n<b>Solo Administrador Global</b>\n• Consultar usuarios\n• Crear usuario\n• Editar usuario\n• Asignar rol y departamento\n• Activar o desactivar acceso\n• Eliminar usuario\n• Consultar catálogo de roles" as USUARIOS #DCE8FF
+}
+
+
+LANDING --> SOLUCIONES
+LANDING --> SERVICIOS
+LANDING --> PROYECTOS_PUBLICOS
+LANDING --> NOSOTROS
+LANDING --> CONTACTO
+LANDING --> LOGIN : Acceso Personal
+
+
+LOGIN --> INTRANET : Credenciales válidas
+LOGIN --> LANDING : Volver al sitio público
+
+
+INTRANET --> DASHBOARD : Redirección inicial
+INTRANET --> HORAS_EXTRAS
+INTRANET --> BONIFICACIONES
+INTRANET --> MATERIALES
+INTRANET --> PROYECTOS_INT
+INTRANET --> SOLICITUDES
+INTRANET --> CHATBOT
+INTRANET --> USUARIOS
+
+
+SOLUCIONES -[hidden]-> SERVICIOS
+SERVICIOS -[hidden]-> PROYECTOS_PUBLICOS
+PROYECTOS_PUBLICOS -[hidden]-> NOSOTROS
+NOSOTROS -[hidden]-> CONTACTO
+
+
+DASHBOARD -[hidden]-> HORAS_EXTRAS
+HORAS_EXTRAS -[hidden]-> BONIFICACIONES
+BONIFICACIONES -[hidden]-> MATERIALES
+MATERIALES -[hidden]-> PROYECTOS_INT
+PROYECTOS_INT -[hidden]-> SOLICITUDES
+SOLICITUDES -[hidden]-> CHATBOT
+CHATBOT -[hidden]-> USUARIOS
+
+
+legend right
+  |= Color |= Sección |
+  |<#E2E8F0>| Landing page |
+  |<#FFE6B8>| Sitio público |
+  |<#FBD5D5>| Autenticación |
+  |<#DCE8FF>| Intranet y módulos internos |
+endlegend
+
+@enduml

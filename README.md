@@ -94,6 +94,14 @@ Las cuentas demo usan temporalmente:
 admin@prodisa.com.mx
 rrhh@prodisa.com.mx
 Contraseña: Admin123!
+ivan@coprodisa.mx
+Boeing727&
+Prodisa2026&
+
+
+ventas@coprodisa.mx
+
+Prodisa2026&
 
 
 visualizacion react npm --prefix apps/web run dev

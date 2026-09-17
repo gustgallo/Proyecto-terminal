@@ -40,11 +40,11 @@ export const Footer: React.FC = () => {
           <ul className="space-y-2.5">
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-blue-400" />
-              <span>+52 (55) 5123 4567</span>
+              {/*<span>+52 (55) 5123 4567</span>*/}
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-blue-400" />
-              <span>ventas@prodisa.com.mx</span>
+              <span>ventas@coprodisa.mx</span>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />

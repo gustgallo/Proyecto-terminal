@@ -46,9 +46,6 @@ export const ClientLogos: React.FC = () => {
               <span className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors line-clamp-1">
                 {client.name}
               </span>
-              <span className="text-[10px] text-slate-400 mt-1 line-clamp-1">
-                {client.tag}
-              </span>
             </div>
           ))}
         </div>
